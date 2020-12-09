@@ -26,7 +26,7 @@ public class KinClient {
      * For more details please look at {@link #KinClient(Context context, Environment environment, String appId, String storeKey)}
      */
     public KinClient(@NonNull Context context, @NonNull Environment environment, String appId) {
-        this(context, environment, appId, "");
+        this(context, environment, appId, "user1");
 
         delegate = new KinClientInternal(context, environment, appId, new KinClientInternal.DummyAppInfoProvider());
     }
@@ -37,7 +37,7 @@ public class KinClient {
      * @param appInfoProvider
      */
     public KinClient(@NonNull Context context, @NonNull Environment environment, String appId, @NonNull AppInfoProvider appInfoProvider) {
-        this(context, environment, appId, "");
+        this(context, environment, appId, "user1");
 
         delegate = new KinClientInternal(context, environment, appId, appInfoProvider);
     }
